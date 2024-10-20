@@ -13,6 +13,7 @@ public class PyCharmTest extends BaseTest {
     @Override
     public void setUp() {
         super.setUp();
+
         pyCharmPage = new PyCharmPage(getDriver());
     }
     @Test
