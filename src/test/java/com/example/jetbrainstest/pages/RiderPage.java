@@ -48,7 +48,7 @@ public class RiderPage {
     }
 
     public void pricingButtonClick(){
-        System.out.println();
+        LOG.info("Кнопка Pricing кликабельна");
         pricingButton.click();
     }
 
@@ -56,13 +56,4 @@ public class RiderPage {
         this.driver = driver;
         PageFactory.initElements(driver, this);
     }
-
-
-
-
-
-
-
-
-
 }
