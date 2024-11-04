@@ -44,7 +44,7 @@ public class RiderPage {
 
         List<String> tabs = new ArrayList<>(driver.getWindowHandles());
         driver.switchTo().window(tabs.get(tabs.size() - 1));
-        LOG.info("Переключились на новую вкладку с Docker");
+        LOG.infoWithScreenshot("Переключились на новую вкладку с Docker");
     }
     public void pricingButtonClick(){
         LOG.info("Кнопка Pricing кликабельна");
