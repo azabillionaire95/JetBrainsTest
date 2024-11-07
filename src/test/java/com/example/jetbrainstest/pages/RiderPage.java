@@ -3,12 +3,10 @@ package com.example.jetbrainstest.pages;
 // https://www.jetbrains.com/rider/
 
 import com.example.jetbrainstest.AllureLogger;
-import io.qameta.allure.Step;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
-import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import java.util.ArrayList;
@@ -30,15 +28,17 @@ public class RiderPage {
     @FindBy(xpath = "//a[contains(@class, 'menu-item')]//span[contains(text(), 'Pricing')]")
     public WebElement pricingButton;
 
-    public Boolean checkIfMainPageButtonIsClickable(){
+    public Boolean checkIfMainPageButtonIsClickable() {
         LOG.info("Кнопка перехода на главную страницу активна");
         return mainPageButton.isEnabled();
     }
-    public void downloadSecondButtonClick(){
+
+    public void downloadSecondButtonClick() {
         LOG.info("Средняя кнопка Download кликабельна");
         secondButtonDownloadRider.click();
     }
-    public void dockerButtonClick(){
+
+    public void dockerButtonClick() {
         LOG.info("Кнопка Docker кликабельна");
         dockerButton.click();
 
@@ -46,11 +46,13 @@ public class RiderPage {
         driver.switchTo().window(tabs.get(tabs.size() - 1));
         LOG.infoWithScreenshot("Переключились на новую вкладку с Docker");
     }
-    public void pricingButtonClick(){
+
+    public void pricingButtonClick() {
         LOG.info("Кнопка Pricing кликабельна");
         pricingButton.click();
     }
-    public RiderPage(WebDriver driver){
+
+    public RiderPage(WebDriver driver) {
         this.driver = driver;
         PageFactory.initElements(driver, this);
     }

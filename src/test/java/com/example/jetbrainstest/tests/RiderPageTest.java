@@ -1,6 +1,6 @@
 package com.example.jetbrainstest.tests;
 
-import com.example.jetbrainstest.MyExtension;
+import com.example.jetbrainstest.AzatsExtension;
 import com.example.jetbrainstest.pages.RiderPage;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
@@ -8,7 +8,7 @@ import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 
-@ExtendWith(MyExtension.class)
+@ExtendWith(AzatsExtension.class)
 public class RiderPageTest extends BaseTest {
     private RiderPage rp;
 
